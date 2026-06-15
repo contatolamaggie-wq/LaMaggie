@@ -10,6 +10,7 @@
   <style>
     /* =========================================================
        LA MAGGIÊ - HTML INLINE COMPLETO
+       Versão sem bloco inicial de botões
        Pronto para GitHub + Vercel
        Troque apenas:
        - CAMINHO-LOGO-CABECALHO.png
@@ -357,159 +358,76 @@
     }
 
     /* =========================================================
-       HERO / BODY
+       BANNER PRINCIPAL - INÍCIO LIMPO
        ========================================================= */
 
-    .lm-hero{
-      padding:32px 0 18px;
+    .lm-top-banner{
+      padding:28px 0 8px;
     }
 
-    .lm-hero__grid{
-      display:grid;
-      grid-template-columns:1.04fr .96fr;
-      gap:24px;
-      align-items:stretch;
-    }
-
-    .lm-hero__copy{
+    .lm-top-banner__box{
       position:relative;
-      min-height:540px;
-      padding:44px;
-      border:1px solid rgba(178,48,51,.14);
-      border-radius:var(--lm-radius);
-      background:
-        linear-gradient(135deg, rgba(255,253,248,.94), rgba(255,240,236,.84)),
-        radial-gradient(circle at 18% 18%, rgba(231,160,163,.22), transparent 28rem);
-      box-shadow:var(--lm-sombra);
-      overflow:hidden;
-    }
-
-    .lm-hero__copy::before,
-    .lm-hero__copy::after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      pointer-events:none;
-    }
-
-    .lm-hero__copy::before{
-      width:210px;
-      height:210px;
-      right:-74px;
-      top:-70px;
-      background:rgba(217,111,111,.13);
-    }
-
-    .lm-hero__copy::after{
-      width:160px;
-      height:160px;
-      left:-68px;
-      bottom:-58px;
-      background:rgba(178,48,51,.08);
-    }
-
-    .lm-kicker{
-      margin-bottom:18px;
-    }
-
-    .lm-hero h1{
-      position:relative;
-      z-index:1;
-      max-width:760px;
-      color:var(--lm-vinho-escuro);
-      font-size:clamp(38px, 6vw, 72px);
-      line-height:.94;
-      letter-spacing:-2.4px;
-      font-weight:1000;
-    }
-
-    .lm-hero h1 em{
-      display:inline-block;
-      color:var(--lm-coral);
-      font-style:normal;
-    }
-
-    .lm-hero__text{
-      position:relative;
-      z-index:1;
-      max-width:610px;
-      margin-top:20px;
-      color:var(--lm-texto-suave);
-      font-size:18px;
-      line-height:1.72;
-      font-weight:620;
-    }
-
-    .lm-hero__actions{
-      position:relative;
-      z-index:1;
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:30px;
-    }
-
-    .lm-hero__note{
-      position:relative;
-      z-index:1;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:24px;
-    }
-
-    .lm-hero__banner{
-      position:relative;
-      min-height:540px;
-      border-radius:var(--lm-radius);
+      min-height:420px;
+      border-radius:32px;
       overflow:hidden;
       border:1px solid rgba(178,48,51,.14);
       background:
-        linear-gradient(135deg, rgba(142,37,42,.2), rgba(217,111,111,.12)),
+        linear-gradient(180deg, rgba(255,253,248,.03), rgba(74,46,42,.34)),
         url("CAMINHO-BANNER-BODY.jpg");
       background-size:cover;
       background-position:center;
       box-shadow:var(--lm-sombra-forte);
     }
 
-    .lm-hero__banner::before{
+    .lm-top-banner__box::before{
       content:"";
       position:absolute;
       inset:0;
       background:
-        linear-gradient(180deg, rgba(0,0,0,.02), rgba(74,46,42,.48)),
-        radial-gradient(circle at 50% 18%, rgba(255,255,255,.16), transparent 18rem);
+        linear-gradient(90deg, rgba(74,46,42,.34), transparent 48%),
+        radial-gradient(circle at 72% 18%, rgba(255,255,255,.16), transparent 18rem);
       pointer-events:none;
     }
 
-    .lm-hero__banner-card{
+    .lm-top-banner__label{
       position:absolute;
       left:24px;
-      right:24px;
       bottom:24px;
-      padding:20px;
-      border:1px solid rgba(255,255,255,.24);
+      max-width:440px;
+      padding:18px 20px;
       border-radius:24px;
-      background:rgba(255,253,248,.86);
+      border:1px solid rgba(255,255,255,.24);
+      background:rgba(255,253,248,.88);
       box-shadow:0 18px 40px rgba(74,46,42,.16);
       backdrop-filter:blur(18px);
     }
 
-    .lm-hero__banner-card strong{
+    .lm-top-banner__label span{
       display:block;
-      color:var(--lm-vinho-escuro);
-      font-size:19px;
+      color:var(--lm-coral);
+      font-size:12px;
       font-weight:950;
-      line-height:1.18;
+      text-transform:uppercase;
+      letter-spacing:.9px;
     }
 
-    .lm-hero__banner-card span{
+    .lm-top-banner__label strong{
+      display:block;
+      margin-top:6px;
+      color:var(--lm-vinho-escuro);
+      font-size:clamp(22px,3vw,34px);
+      line-height:1.05;
+      font-weight:1000;
+      letter-spacing:-.8px;
+    }
+
+    .lm-top-banner__label small{
       display:block;
       margin-top:8px;
       color:var(--lm-texto-suave);
       font-size:14px;
-      font-weight:700;
       line-height:1.45;
+      font-weight:700;
     }
 
     /* =========================================================
@@ -540,7 +458,7 @@
        ========================================================= */
 
     .lm-mini{
-      padding:8px 0 22px;
+      padding:16px 0 22px;
     }
 
     .lm-mini__grid{
@@ -1078,19 +996,9 @@
         place-items:center;
       }
 
-      .lm-hero__grid,
       .lm-market__grid,
       .lm-about{
         grid-template-columns:1fr;
-      }
-
-      .lm-hero__copy,
-      .lm-hero__banner{
-        min-height:auto;
-      }
-
-      .lm-hero__banner{
-        min-height:420px;
       }
 
       .lm-products{
@@ -1124,50 +1032,36 @@
         display:none;
       }
 
-      .lm-hero{
-        padding:20px 0 12px;
-      }
-
-      .lm-hero__copy{
-        padding:26px 18px;
-        border-radius:24px;
-      }
-
-      .lm-hero h1{
-        letter-spacing:-1.5px;
-      }
-
-      .lm-hero__text{
-        font-size:16px;
-        line-height:1.62;
-      }
-
-      .lm-hero__actions{
-        display:grid;
-        grid-template-columns:1fr;
-      }
-
-      .lm-hero__actions .lm-btn{
-        width:100%;
-      }
-
-      .lm-hero__banner{
-        min-height:360px;
-        border-radius:24px;
-      }
-
-      .lm-hero__banner-card{
-        left:14px;
-        right:14px;
-        bottom:14px;
-        padding:16px;
-        border-radius:20px;
-      }
-
       .lm-alert{
         margin-top:6px;
         font-size:13px;
         border-radius:16px;
+      }
+
+
+      .lm-top-banner{
+        padding:20px 0 6px;
+      }
+
+      .lm-top-banner__box{
+        min-height:300px;
+        border-radius:24px;
+      }
+
+      .lm-top-banner__label{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:15px 16px;
+        border-radius:20px;
+      }
+
+      .lm-top-banner__label small{
+        font-size:13px;
+      }
+
+      .lm-mini{
+        padding:14px 0 18px;
       }
 
       .lm-mini__grid{
@@ -1289,66 +1183,21 @@
     <main id="inicio">
 
       <!-- =====================================================
-           BODY / HERO
+           BANNER PRINCIPAL
            Troque CAMINHO-BANNER-BODY.jpg pelo caminho do banner.
            Exemplo: ./assets/banner-principal.jpg
            ===================================================== -->
-      <section class="lm-hero">
+      <section class="lm-top-banner" aria-label="Banner principal da La Maggiê">
         <div class="lm-container">
-          <div class="lm-hero__grid">
-
-            <div class="lm-hero__copy lm-reveal">
-              <div class="lm-kicker lm-pill"><span></span> Feito à mão com afeto</div>
-
-              <h1>
-                Presentes artesanais com <em>alma de casa</em>.
-              </h1>
-
-              <p class="lm-hero__text">
-                Peças delicadas para decorar, presentear e transformar pequenos momentos em lembranças bonitas.
-                Artesanato, toalhas, embalagens e encomendas especiais feitas com carinho pela La Maggiê.
-              </p>
-
-              <div class="lm-hero__actions">
-                <a class="lm-btn lm-btn--whatsapp" href="https://wa.me/55SEUDDDSEUNUMERO?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20La%20Maggi%C3%AA%20e%20gostaria%20de%20fazer%20uma%20encomenda." target="_blank" rel="noopener">
-                  <span class="lm-btn__icon">☎</span>
-                  <span class="lm-btn__text">Chamar no WhatsApp</span>
-                </a>
-
-                <a class="lm-btn lm-btn--ml" href="LINK-MERCADO-LIVRE-AQUI" target="_blank" rel="noopener">
-                  <span class="lm-btn__icon">ML</span>
-                  <span class="lm-btn__text">Mercado Livre</span>
-                </a>
-
-                <a class="lm-btn lm-btn--shopee" href="LINK-SHOPEE-AQUI" target="_blank" rel="noopener">
-                  <span class="lm-btn__icon">S</span>
-                  <span class="lm-btn__text">Shopee</span>
-                </a>
-              </div>
-
-              <div class="lm-hero__note" aria-label="Destaques da loja">
-                <span class="lm-pill"><span></span> Encomendas pelo WhatsApp</span>
-                <span class="lm-pill"><span></span> Embalagens com carinho</span>
-                <span class="lm-pill"><span></span> Peças para presentear</span>
-              </div>
+          <div class="lm-top-banner__box lm-reveal">
+            <div class="lm-top-banner__label">
+              <span>La Maggiê</span>
+              <strong>Artesanato com carinho</strong>
+              <small>CAMINHO-BANNER-BODY.jpg — coloque aqui o banner principal da home.</small>
             </div>
-
-            <aside class="lm-hero__banner lm-reveal" aria-label="Banner principal da La Maggiê">
-              <div class="lm-hero__banner-card">
-                <strong>CAMINHO-BANNER-BODY.jpg</strong>
-                <span>Coloque aqui o banner principal da home. O visual já está preparado para desktop e mobile.</span>
-              </div>
-            </aside>
-
           </div>
         </div>
       </section>
-
-      <div class="lm-container">
-        <div class="lm-alert lm-reveal" role="note">
-          <strong>Pedido mínimo:</strong> R$ 40,00 + frete a pagar
-        </div>
-      </div>
 
       <!-- =====================================================
            MINI BANNERS
@@ -1382,6 +1231,14 @@
           </div>
         </div>
       </section>
+
+
+
+      <div class="lm-container">
+        <div class="lm-alert lm-reveal" role="note">
+          <strong>Pedido mínimo:</strong> R$ 40,00 + frete a pagar
+        </div>
+      </div>
 
       <!-- =====================================================
            VITRINE
@@ -1459,6 +1316,7 @@
 
       <!-- =====================================================
            MARKETPLACES
+           Botões principais ficam somente aqui, sem repetir no topo.
            ===================================================== -->
       <section class="lm-section" id="marketplaces">
         <div class="lm-container">
