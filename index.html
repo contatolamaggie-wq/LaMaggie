@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Maggiê | Site em manutenção</title>
+  <meta name="description" content="O site da La Maggiê está em manutenção. Em breve voltamos com novidades artesanais feitas com carinho." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#FFF9F0" />
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <main class="page-shell" aria-labelledby="titulo-principal">
+    <section class="card">
+      <div class="brand-kicker">Ateliê artesanal</div>
+
+      <h1 id="titulo-principal">La Maggiê</h1>
+
+      <p class="status-pill" aria-label="Status do site">
+        Site em manutenção
+      </p>
+
+      <p class="lead">
+        Estamos preparando este cantinho com carinho, calma e capricho.
+        Em breve, a La Maggiê volta com peças artesanais cheias de afeto,
+        cuidado e beleza para o dia a dia.
+      </p>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <p class="note">
+        Enquanto o site fica pronto, você pode falar conosco pelo WhatsApp.
+      </p>
+
+      <!-- Troque o número abaixo pelo WhatsApp oficial da La Maggiê.
+           Formato: 55 + DDD + número. Exemplo: 5519999999999 -->
+      <a class="button" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">
+        Chamar no WhatsApp
+      </a>
+
+      <p class="small">
+        Obrigada pela visita. Estamos costurando cada detalhe com amor.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    // Service Worker temporário de manutenção.
+    // Quando o site definitivo entrar no ar, remova este registro ou substitua por um SW novo.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
