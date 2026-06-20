@@ -1,0 +1,10 @@
+{
+  "name": "La Maggiê",
+  "short_name": "La Maggiê",
+  "description": "Site temporário de manutenção da La Maggiê.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF9F0",
+  "theme_color": "#FFF9F0",
+  "lang": "pt-BR"
+}
